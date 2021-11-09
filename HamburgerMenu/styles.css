@@ -1,8 +1,13 @@
-/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Inconsolata&display=swap');
+
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+}
+
+html {
+   font-family: 'Inconsolata', monospace;
 }
 
 li {
@@ -15,6 +20,14 @@ a {
 
 .header {
    border-bottom: 1px solid red;
+   display: flex;
+   justify-content: space-between;
+}
+
+.logo {
+   padding: 1rem 1.5rem;
+   font-size: 1.5rem;
+   font-weight: 800;
 }
 
 .navbar {
@@ -24,7 +37,7 @@ a {
    padding: 1rem 1.5rem;
 }
 
-.hamburger {
+.hamburger-container{
    display: none;
 }
 
@@ -35,4 +48,38 @@ a {
    margin: 5px auto;
    transition: all 0.3s ease-in-out;
    background-color: black;
+}
+
+.nav-menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.nav-menu-item {
+   margin-left: 5rem;
+}
+
+.nav-link:hover {
+   color: lightcoral;
+}
+
+@media (max-width: 768px) {
+   .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow:
+         0 10px 27px rgba(0, 0, 0, 0.05);
+   }
+
+   .nav-menu.active {
+      left: 0;
+   }
 }
