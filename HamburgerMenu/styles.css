@@ -43,8 +43,8 @@ a {
 
 .bar {
    display: block;
-   width: 20px;
-   height: 2px;
+   width: 25px;
+   height: 3px;
    margin: 5px auto;
    transition: all 0.3s ease-in-out;
    background-color: black;
@@ -81,5 +81,28 @@ a {
 
    .nav-menu.active {
       left: 0;
+   }
+
+   .nav-menu-item {
+      margin: 2.25rem 0;
+   }
+
+   .hamburger-container {
+      display: block;
+      cursor: pointer;
+   }
+
+   .hamburger-container.active .bar:nth-child(1) {
+      -webkit-transform: translateY(8px) rotate(45deg);
+      transform: translateY(8px) rotate(45deg);
+   }
+
+   .hamburger-container.active .bar:nth-child(2) {
+      opacity: 0;
+   }
+
+   .hamburger-container.active .bar:nth-child(3) {
+      -webkit-transform: translateY(-8px) rotate(-45deg);
+      transform: translateY(-8px) rotate(-45deg);
    }
 }
