@@ -1,0 +1,38 @@
+/* Reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+li {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+.header {
+   border-bottom: 1px solid red;
+}
+
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem 1.5rem;
+}
+
+.hamburger {
+   display: none;
+}
+
+.bar {
+   display: block;
+   width: 20px;
+   height: 2px;
+   margin: 5px auto;
+   transition: all 0.3s ease-in-out;
+   background-color: black;
+}
